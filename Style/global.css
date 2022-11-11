@@ -1,0 +1,74 @@
+
+body {
+  background-color: #daf092;
+  font-style: oblique;
+}
+
+h1,
+h2 {
+  font-size: 6rem;
+  
+}
+
+h2 {
+  font-size: 4rem;
+  
+}
+
+.dice {
+  background: #fdfdfd;
+  height: 300px;
+  width: 300px;
+  border-radius: 3vmin;
+  
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5rem;
+}
+
+.one-player,
+.one-dice {
+  grid-column: 2;
+}
+.two-player,
+.two-dice {
+  grid-column: 4;
+}
+
+.one-dice,
+.two-dice {
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1em;
+  padding: 1em;
+  justify-items: center;
+}
+
+.point {
+  width: 5rem;
+  border-radius: 10vmin;
+  background-color: #f7005a;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1;
+  }
+
+  .one-player,
+  .two-player,
+  .one-dice,
+  .two-dice {
+    grid-column: 2;
+  }
+
+  .two-dice {
+    grid-row: 4;
+  }
+}
